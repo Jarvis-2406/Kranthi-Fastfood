@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kranthi Fast Foods, Prattipadu | Dum Biriyani, Chicken Lollipop and Catering</title>
+<meta name="description" content="Family-friendly fast food in Prattipadu since 2002. Hyderabadi dum biriyani, fried rice, chicken wings and catering for every event.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,800;9..144,900&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--red:#8f1713;--red2:#b3201a;--gold:#f4b400;--cream:#f7edd5;--char:#2a1410;--ember:#e8571f;--e:cubic-bezier(.22,.8,.24,1)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Figtree,system-ui,sans-serif;color:var(--char);background:var(--cream);line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.08;font-weight:800}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1120px;margin:auto;padding:0 22px}
+section{padding:clamp(64px,10vw,120px) 0}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:60}
+#pre{position:fixed;inset:0;background:var(--red);z-index:70;display:grid;place-items:center;transition:opacity .7s var(--e),visibility .7s}
+#pre i{width:92px;height:92px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 14px #f4b40033;animation:pop 1.1s var(--e) infinite alternate}
+#pre.go{opacity:0;visibility:hidden}
+@keyframes pop{to{transform:scale(1.18);box-shadow:0 0 0 26px #f4b40010}}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s,box-shadow .4s,padding .4s;padding:14px 0;color:#fff}
+nav.s{background:#2a1410f2;backdrop-filter:blur(10px);padding:8px 0;box-shadow:0 6px 24px #0004}
+nav .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{font:900 1.35rem Fraunces,serif;color:var(--gold)}
+nav ul{display:flex;gap:30px;list-style:none;align-items:center;font-weight:500;font-size:.95rem}
+nav ul a:not(.btn){position:relative;padding:4px 0}
+nav ul a:not(.btn):after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--e)}
+nav ul a:not(.btn):hover:after{transform:scaleX(1)}
+#bg{display:none;background:none;border:0;color:#fff;font-size:1.7rem;cursor:pointer}
+.btn{display:inline-block;border:0;cursor:pointer;font:600 .97rem Figtree;padding:13px 28px;border-radius:50px;background:var(--gold);color:var(--char);transition:transform .3s var(--e),box-shadow .3s,background .3s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 26px #0003}
+.btn.o{background:none;border:2px solid #ffffff80;color:#fff}
+.btn.o:hover{background:#fff;color:var(--red)}
+.btn.r{background:var(--red2);color:#fff}
+@media(max-width:780px){#bg{display:block}nav ul{position:fixed;inset:0 0 auto 0;top:0;background:var(--char);flex-direction:column;padding:90px 0 36px;gap:22px;transform:translateY(-105%);transition:transform .5s var(--e);z-index:-1}nav ul.open{transform:none}}
+/* hero */
+.hero{min-height:100vh;display:grid;align-items:center;background:radial-gradient(70% 60% at 85% 30%,#d3331f 0,transparent 70%),radial-gradient(50% 50% at 5% 100%,#5a0c0b 0,transparent 70%),var(--red);color:#fff;padding:110px 0 70px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;text-align:center}.hero .btns{justify-content:center}.plate{order:-1;margin:0 auto}}
+.hero h1{font-size:clamp(2.5rem,6.2vw,5rem);letter-spacing:-.02em;font-weight:900}
+.hero h1 span{display:block;overflow:hidden}
+.hero h1 b{display:block;font-weight:inherit;transform:translateY(110%);transition:transform 1.1s var(--e)}
+.ready .hero h1 b{transform:none}
+.hero h1 span:nth-child(2) b{transition-delay:.12s;color:var(--gold)}
+.hero h1 span:nth-child(3) b{transition-delay:.24s}
+.hero p{max-width:470px;margin:22px 0 30px;font-size:1.08rem;opacity:0;transition:opacity 1s .7s}
+.hero .btns{display:flex;gap:12px;flex-wrap:wrap;opacity:0;transition:opacity 1s .9s}
+.ready .hero p,.ready .hero .btns{opacity:.95}
+@media(max-width:860px){.hero p{margin-inline:auto}}
+.plate{position:relative;width:min(84vw,470px);aspect-ratio:1;justify-self:center;opacity:0;transform:scale(.85) rotate(-8deg);transition:all 1.3s .2s var(--e)}
+.ready .plate{opacity:1;transform:none}
+.plate .d{position:absolute;inset:7%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffd24d,var(--gold) 55%,#d99a00);box-shadow:0 30px 70px #0006,inset 0 0 0 10px #ffffff22}
+.plate .c{position:absolute;inset:23%;border-radius:50%;background:var(--cream);color:var(--red);display:grid;place-content:center;text-align:center;box-shadow:inset 0 6px 18px #0002}
+.plate .c b{font:900 clamp(1.9rem,6vw,2.9rem) Fraunces,serif;letter-spacing:.01em;line-height:1}
+.plate .c i{font:normal 600 .85rem Figtree;color:var(--char);margin-top:6px}
+.plate .c u{text-decoration:none;font-size:.78rem;color:var(--red2);font-weight:600;margin-top:2px}
+.ring{position:absolute;inset:0;width:100%;animation:spin 38s linear infinite}
+.ring text{font:600 17px Figtree;fill:#fff;letter-spacing:2px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.steam{position:absolute;left:50%;top:6%;width:100%;height:0}
+.steam i{position:absolute;bottom:0;width:34px;height:120px;border-radius:50%;background:#fff;filter:blur(22px);opacity:0;animation:rise 4.5s ease-in infinite}
+.steam i:nth-child(1){left:-70px}.steam i:nth-child(2){left:-10px;animation-delay:1.4s}.steam i:nth-child(3){left:50px;animation-delay:2.8s}
+@keyframes rise{0%{opacity:0;transform:translateY(40px) scaleX(.8)}30%{opacity:.35}100%{opacity:0;transform:translateY(-130px) scaleX(1.6)}}
+.cue{position:absolute;bottom:22px;left:50%;width:2px;height:44px;background:#ffffff40;overflow:hidden}
+.cue:after{content:"";display:block;height:50%;background:var(--gold);animation:cue 1.8s infinite}
+@keyframes cue{from{transform:translateY(-100%)}to{transform:translateY(220%)}}
+/* marquee */
+.mq{background:var(--gold);color:var(--char);overflow:hidden;white-space:nowrap;padding:16px 0;font:800 1.35rem Fraunces,serif}
+.mq div{display:inline-block;animation:mq 34s linear infinite}
+.mq span{margin:0 22px}.mq em{font-style:normal;color:var(--red2)}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--e),transform .9s var(--e)}
+.rv.in{opacity:1;transform:none}
+/* about */
+.about .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+@media(max-width:860px){.about .wrap{grid-template-columns:1fr;gap:34px}}
+h2{font-size:clamp(2rem,4.6vw,3.3rem);letter-spacing:-.015em;color:var(--red)}
+.about p{margin-top:18px;max-width:560px;font-size:1.06rem}
+.stats{display:grid;gap:22px}
+.stat{border-left:4px solid var(--gold);padding-left:20px}
+.stat b{font:900 3rem Fraunces,serif;color:var(--red);line-height:1}
+.stat span{display:block;font-size:.95rem;opacity:.75}
+/* signature */
+.sig{background:var(--char);color:#fff}
+.sig h2{color:var(--gold)}
+.sg{display:grid;grid-template-columns:1.15fr 1fr;grid-template-rows:1fr 1fr;gap:18px;margin-top:40px}
+@media(max-width:780px){.sg{grid-template-columns:1fr;grid-template-rows:none}}
+.sc{position:relative;border-radius:22px;padding:30px;overflow:hidden;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .6s var(--e)}
+.sc:hover{transform:translateY(-6px)}
+.sc:first-child{grid-row:span 2;min-height:420px}
+.sc em{position:absolute;top:14px;right:22px;font-size:clamp(5rem,12vw,9rem);font-style:normal;line-height:1;transition:transform .8s var(--e)}
+.sc:hover em{transform:scale(1.12) rotate(-8deg)}
+.sc h3{font-size:clamp(1.6rem,3vw,2.3rem)}
+.sc p{opacity:.9;max-width:330px;font-size:.98rem;margin-top:6px}
+.sc:nth-child(1){background:linear-gradient(150deg,#d3331f,var(--red))}
+.sc:nth-child(2){background:linear-gradient(150deg,#e8981d,#c46a0c)}
+.sc:nth-child(3){background:linear-gradient(150deg,#f4b400,#d98d00);color:var(--char)}
+/* menu */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:30px 0 26px}
+.tabs button{border:2px solid var(--red2);background:none;color:var(--red2);padding:8px 20px;border-radius:40px;font:600 .9rem Figtree;cursor:pointer;transition:all .3s var(--e)}
+.tabs button.a,.tabs button:hover{background:var(--red2);color:#fff}
+#ml{display:grid;grid-template-columns:1fr 1fr;gap:6px 56px;transition:opacity .28s,transform .28s}
+#ml.f{opacity:0;transform:translateY(10px)}
+@media(max-width:780px){#ml{grid-template-columns:1fr}}
+.it{padding:18px 0;border-bottom:1.5px dotted #8f171355;animation:fi .6s var(--e) both}
+@keyframes fi{from{opacity:0;transform:translateY(14px)}}
+.it h3{font-size:1.25rem;display:flex;align-items:center;gap:10px}
+.it p{font-size:.93rem;opacity:.75;margin-top:2px}
+.dot{width:15px;height:15px;border:2px solid;border-radius:3px;display:inline-grid;place-items:center;flex:none}
+.dot:after{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.dot.v{color:#1b8a3b}.dot.n{color:#a31616}
+.tg{font:600 .7rem Figtree;background:var(--gold);padding:2px 10px;border-radius:20px;margin-left:auto;white-space:nowrap}
+.legend{margin-top:22px;font-size:.88rem;opacity:.7}
+.note{margin-top:30px;background:var(--red);color:#fff;border-radius:18px;padding:22px 26px}
+.note b{color:var(--gold)}
+/* reviews */
+.rvw{background:var(--red);color:#fff;overflow:hidden}
+.rvw h2{color:var(--gold)}
+.rh{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:16px;margin-bottom:34px}
+.rh p{opacity:.85;margin-top:8px}
+.ar button{width:48px;height:48px;border-radius:50%;border:2px solid #ffffff66;background:none;color:#fff;font-size:1.2rem;cursor:pointer;margin-left:8px;transition:.3s}
+.ar button:hover{background:var(--gold);color:var(--char);border-color:var(--gold)}
+#tr{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 22px 10px;margin:0 -22px}
+#tr::-webkit-scrollbar{display:none}
+.q{flex:0 0 min(86vw,380px);scroll-snap-align:start;background:#00000026;border-radius:22px;padding:30px;border:1px solid #ffffff1f}
+.q p{font:500 1.18rem/1.5 Fraunces,serif}
+.q cite{display:block;margin-top:18px;font-size:.88rem;font-style:normal;opacity:.75}
+.q .s{color:var(--gold);letter-spacing:3px;display:block;margin-bottom:10px}
+/* catering */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+@media(max-width:860px){.two{grid-template-columns:1fr;gap:34px}}
+.cat ul{list-style:none;margin-top:20px;display:grid;gap:10px}
+.cat li:before{content:"✦";color:var(--ember);margin-right:10px}
+form.fm{background:#fff;padding:30px;border-radius:24px;box-shadow:0 24px 60px #8f171322}
+label{display:block;font-size:.84rem;font-weight:600;margin:14px 0 5px}
+label:first-child{margin-top:0}
+input,select,textarea{width:100%;padding:12px 15px;border:1.5px solid #e6d9b8;border-radius:12px;font:inherit;background:#fffdf6;transition:border .3s,box-shadow .3s}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--gold);box-shadow:0 0 0 4px #f4b40033}
+form .btn{margin-top:20px;width:100%}
+.hint{font-size:.78rem;opacity:.6;text-align:center;margin-top:8px}
+/* visit */
+.visit{background:var(--char);color:#fff}
+.visit h2{color:var(--gold)}
+.vi p{margin-top:14px}
+.vi a.t{font:800 2rem Fraunces,serif;color:var(--gold)}
+.vi .btn{margin-top:18px}
+.map{border-radius:24px;overflow:hidden;min-height:380px;box-shadow:0 20px 50px #0006}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;filter:saturate(.9)}
+.hrs{display:flex;justify-content:space-between;max-width:320px;border-bottom:1px solid #ffffff2a;padding:8px 0}
+footer{background:#170a07;color:#ffffffb3;text-align:center;padding:34px 20px;font-size:.88rem}
+footer b{color:var(--gold);font-family:Fraunces,serif;font-size:1.3rem;display:block;margin-bottom:6px}
+/* chat + wa */
+.wa{position:fixed;left:18px;bottom:18px;z-index:40;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:1.6rem;box-shadow:0 8px 22px #0005;transition:transform .3s var(--e)}
+.wa:hover{transform:scale(1.1)}
+#cb{position:fixed;right:18px;bottom:18px;z-index:40;background:var(--gold);color:var(--char);border:0;border-radius:50px;padding:15px 22px;font:600 .95rem Figtree;cursor:pointer;box-shadow:0 8px 24px #0005;transition:transform .3s var(--e)}
+#cb:hover{transform:translateY(-3px)}
+#ch{position:fixed;right:18px;bottom:82px;z-index:40;width:min(370px,calc(100vw - 36px));height:490px;max-height:72vh;background:#fff;border-radius:22px;box-shadow:0 20px 60px #0006;display:flex;flex-direction:column;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(18px) scale(.97);transition:all .4s var(--e);transform-origin:bottom right}
+#ch.open{opacity:1;visibility:visible;transform:none}
+.chh{background:var(--red);color:#fff;padding:15px 18px;display:flex;justify-content:space-between;font:800 1.05rem Fraunces,serif}
+.chh button{background:none;border:0;color:#fff;font-size:1.4rem;cursor:pointer}
+#ms{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:8px;background:var(--cream)}
+.m{max-width:86%;padding:10px 14px;border-radius:16px;font-size:.9rem;white-space:pre-line;animation:fi .4s var(--e)}
+.m.b{background:#fff;align-self:flex-start;border-bottom-left-radius:4px}
+.m.u{background:var(--red2);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+#cp{display:flex;flex-wrap:wrap;gap:6px;padding:8px 12px 0;background:var(--cream)}
+#cp button{border:1.5px solid var(--red2);color:var(--red2);background:#fff;border-radius:20px;padding:4px 12px;font:.78rem Figtree;cursor:pointer}
+#cp button:hover{background:var(--red2);color:#fff}
+#cf{display:flex;border-top:1px solid #eee}
+#cf input{border:0;border-radius:0;flex:1}
+#cf button{border:0;background:var(--gold);padding:0 20px;font-weight:600;cursor:pointer}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition-duration:.01ms!important}html{scroll-behavior:auto}.rv,.hero p,.hero .btns,.plate{opacity:1;transform:none}.hero h1 b{transform:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div id="pre"><i></i></div>
+
+<nav id="nv"><div class="wrap">
+  <a href="#top" class="logo">Kranthi</a>
+  <button id="bg" aria-label="Menu">&#9776;</button>
+  <ul id="lk"><li><a href="#story">Our story</a></li><li><a href="#menu">Menu</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#catering">Catering</a></li><li><a href="#visit">Visit</a></li><li><a class="btn" href="tel:+919441461339">Call now</a></li></ul>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1><span><b>Prattipadu’s</b></span><span><b>family table,</b></span><span><b>since 2002.</b></span></h1>
+      <p>Hyderabadi dum biriyani, crispy lollipops and Indo-Chinese favourites, cooked fresh and served with a smile. Open every day, 10 AM to 11 PM.</p>
+      <div class="btns"><a class="btn" href="#menu">Explore the menu</a><a class="btn o" href="#catering">Plan your event</a></div>
+    </div>
+    <div class="plate">
+      <div class="steam"><i></i><i></i><i></i></div>
+      <div class="d"></div>
+      <svg class="ring" viewBox="0 0 400 400" aria-hidden="true"><defs><path id="cp1" d="M200,200 m-176,0 a176,176 0 1,1 352,0 a176,176 0 1,1 -352,0"/></defs><text><textPath href="#cp1" textLength="1090" lengthAdjust="spacing">Dum Biriyani ✦ Chicken Lollipop ✦ Fried Rice ✦ Chicken Wings ✦ Since 2002 ✦ </textPath></text></svg>
+      <div class="c"><b>KRANTHI</b><i>Fast Food</i><u>Since 2002</u></div>
+    </div>
+  </div>
+  <div class="cue" aria-hidden="true"></div>
+</header>
+
+<div class="mq" aria-hidden="true"><div id="mqi"></div></div>
+
+<section class="about" id="story"><div class="wrap">
+  <div class="rv">
+    <h2>Cooked the way a family would cook for family.</h2>
+    <p>For more than two decades, Kranthi Fast Foods has been the place Prattipadu comes to for a satisfying meal. Our chef puts real love into every pot of biriyani and every plate of crispy starters, and guests say you can taste it.</p>
+    <p>Come in with family, grab a parcel on your way home, or let us cater your celebration. Dine-in, takeaway, delivery and parking are all available.</p>
+  </div>
+  <div class="stats rv">
+    <div class="stat"><b data-n="yrs">0</b><span>years serving Prattipadu</span></div>
+    <div class="stat"><b data-n="4.6" data-d="1">0</b><span>average rating on Google</span></div>
+    <div class="stat"><b>13 hrs</b><span>open every day, 10 AM to 11 PM</span></div>
+  </div>
+</div></section>
+
+<section class="sig" id="signature"><div class="wrap">
+  <div class="rv"><h2>The dishes people drive back for.</h2></div>
+  <div class="sg rv">
+    <div class="sc"><em>🍛</em><h3>Chicken Biriyani</h3><p>Slow-cooked Hyderabadi dum biriyani. Our best-known dish, and the one guests mention first.</p></div>
+    <div class="sc"><em>🍗</em><h3>Chicken Wings</h3><p>Crispy outside, juicy inside, with plenty of spice.</p></div>
+    <div class="sc"><em>🍚</em><h3>Fried Rice</h3><p>Wok-tossed and fragrant, in Chicken or Veg.</p></div>
+  </div>
+</div></section>
+
+<section id="menu"><div class="wrap">
+  <div class="rv"><h2>Our menu</h2></div>
+  <div class="tabs rv" id="tb"></div>
+  <div id="ml"></div>
+  <p class="legend"><span class="dot v"></span> Vegetarian &nbsp;&nbsp; <span class="dot n"></span> Non-vegetarian. For today’s prices, call or WhatsApp 94414 61339.</p>
+  <div class="note rv"><b>Special days.</b> Fish fry and curry, prawns and mutton are cooked only on special days. We announce each one in advance, so call or message us to hear about the next.</div>
+</div></section>
+
+<section class="rvw" id="reviews"><div class="wrap">
+  <div class="rh rv"><div><h2>Kind words from our guests</h2><p>4.6 stars from 15 reviews on Google</p></div>
+    <div class="ar"><button id="pv" aria-label="Previous review">&#8592;</button><button id="nx" aria-label="Next review">&#8594;</button></div></div>
+  <div id="tr">
+    <div class="q"><span class="s">★★★★★</span><p>“The chef is very friendly and his love for cooking shows in the food. I recommend them for parties, marriages and any gathering.”</p><cite>Vishal Anand, Google review</cite></div>
+    <div class="q"><span class="s">★★★★★</span><p>“We went with family. It is a family friendly restaurant. The chicken fried rice is a must try.”</p><cite>Katheti Praveen, Google review</cite></div>
+    <div class="q"><span class="s">★★★★★</span><p>“We took the Hyderabadi dum biriyani and fried rice. A good restaurant in Prattipadu.”</p><cite>Veera Babu, Google review</cite></div>
+    <div class="q"><span class="s">★★★★★</span><p>“Food is very delicious. We ate the chicken wings, a must try.”</p><cite>Middem Muthyalamma, Google review</cite></div>
+    <div class="q"><span class="s">★★★★★</span><p>“We tried the wet chicken lollipops. Must try, and we will visit again.”</p><cite>B. Harshi, Google review</cite></div>
+    <div class="q"><span class="s">★★★★★</span><p>“Super tasty food in restaurant style.”</p><cite>Lokesh Yeluri, Local Guide</cite></div>
+  </div>
+</div></section>
+
+<section class="cat" id="catering"><div class="wrap two">
+  <div class="rv">
+    <h2>Feeding a crowd? We’ll handle it.</h2>
+    <p style="margin-top:18px;max-width:480px;font-size:1.06rem">Weddings, birthdays, office lunches, house functions: we cater for every kind of event. Tell us the date, the number of guests and the occasion, and we’ll plan the menu around you.</p>
+    <ul><li>Biriyani and starters cooked in bulk</li><li>Menu planned to your requirements</li><li>Prepared fresh by an experienced chef</li></ul>
+  </div>
+  <form class="fm rv" id="cf1">
+    <label>Your name</label><input name="name" required autocomplete="name">
+    <label>Phone number</label><input name="phone" type="tel" required autocomplete="tel">
+    <label>Event type</label><select name="event"><option>Wedding</option><option>Birthday</option><option>Corporate</option><option>House function</option><option>Other</option></select>
+    <label>Event date</label><input name="date" type="date" required>
+    <label>Number of guests</label><input name="guests" type="number" min="1" required>
+    <button class="btn r" type="submit">Send enquiry on WhatsApp</button>
+    <p class="hint">WhatsApp opens with your details already filled in.</p>
+  </form>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap two">
+  <div class="vi rv">
+    <h2>Come hungry.</h2>
+    <p>Kranthi Fast Foods<br>Near MRO Office, beside the Mineral Water Plant<br>Prattipadu, Andhra Pradesh 533432</p>
+    <p><a class="t" href="tel:+919441461339">94414 61339</a><br>Call or WhatsApp</p>
+    <div class="hrs" style="margin-top:20px"><span>Every day</span><b>10 AM to 11 PM</b></div>
+    <a class="btn" href="https://maps.google.com/?q=Kranthi+Fast+Foods+Prattipadu" target="_blank" rel="noopener">Get directions</a>
+    <form id="cf2" style="margin-top:26px">
+      <label style="margin-top:0">Send us a message</label>
+      <input name="name" placeholder="Your name" required style="margin-bottom:10px">
+      <textarea name="msg" rows="2" placeholder="Your question" required></textarea>
+      <button class="btn o" type="submit" style="margin-top:12px">Message on WhatsApp</button>
+    </form>
+  </div>
+  <div class="map rv"><iframe title="Kranthi Fast Foods on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Kranthi+Fast+Foods+Prattipadu+Andhra+Pradesh+533432&output=embed"></iframe></div>
+</div></section>
+
+<footer><b>Kranthi Fast Foods</b>Serving Prattipadu since 2002. © <span id="yr"></span></footer>
+
+<a class="wa" href="https://wa.me/919441461339" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">&#128172;</a>
+<button id="cb">Ask Kranthi</button>
+<div id="ch" role="dialog" aria-label="Kranthi assistant">
+  <div class="chh"><span>Ask Kranthi</span><button id="cx" aria-label="Close chat">×</button></div>
+  <div id="ms"></div><div id="cp"></div>
+  <form id="cfm"><input id="q" placeholder="Ask about menu, timings, location…" autocomplete="off"><button>Send</button></form>
+</div>
+
+<script>
+const $=s=>document.querySelector(s),WA='919441461339';
+const send=t=>window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(t),'_blank');
+$('#yr').textContent=new Date().getFullYear();
+const YRS=new Date().getFullYear()-2002;
+/* preloader + hero sequence */
+addEventListener('load',()=>setTimeout(()=>{$('#pre').classList.add('go');document.body.classList.add('ready')},900));
+setTimeout(()=>{$('#pre').classList.add('go');document.body.classList.add('ready')},3000);
+/* nav, progress, mobile menu */
+const nv=$('#nv'),bar=$('#bar');
+addEventListener('scroll',()=>{nv.classList.toggle('s',scrollY>40);const h=document.documentElement;bar.style.width=(scrollY/(h.scrollHeight-innerHeight)*100)+'%'},{passive:true});
+$('#bg').onclick=()=>$('#lk').classList.toggle('open');
+$('#lk').onclick=e=>{if(e.target.tagName==='A')$('#lk').classList.remove('open')};
+/* marquee */
+const names=['Dum Biriyani','Chicken Lollipop','Fried Rice','Chicken 65','Chicken Wings','Chicken Manchurian','Veg Manchuria','Noodles'];
+const row=names.map(n=>`<span>${n}</span><em>✦</em>`).join('');$('#mqi').innerHTML=row+row+row+row;
+/* reveal + counters */
+const count=el=>{let t=el.dataset.n==='yrs'?YRS:+el.dataset.n,d=+el.dataset.d||0,s=performance.now();
+ (function f(n){const p=Math.min((n-s)/1400,1),v=t*(1-Math.pow(1-p,3));el.textContent=v.toFixed(d);if(p<1)requestAnimationFrame(f)})(s)};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('[data-n]').forEach(count);io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* menu */
+const M=[
+['rice','n','Chicken Biriyani','Aromatic Hyderabadi dum biriyani, slow-cooked and full of flavour.','Signature'],
+['rice','b','Fried Rice','Wok-tossed and fragrant. Choose Chicken or Veg.','Signature'],
+['start','n','Chicken Lollipop','Crunchy outside and tender inside. Ask for the wet version too.'],
+['start','n','Chicken 65','Spicy, tangy South Indian classic.'],
+['start','n','Chicken Wings','Crispy, juicy and generously spiced.','Signature'],
+['chin','n','Chicken Manchurian','Indo-Chinese favourite in a rich, tangy sauce.'],
+['chin','v','Veg Manchuria','Crisp vegetable balls tossed in Manchurian sauce.'],
+['chin','b','Noodles','Stir-fried to order. Choose Chicken or Veg.'],
+['spl','n','Fish Fry and Curry','Cooked on special days. Announced in advance.','Special day'],
+['spl','n','Prawns','Cooked on special days. Announced in advance.','Special day'],
+['spl','n','Mutton','Cooked on special days. Announced in advance.','Special day']];
+const T=[['all','All'],['rice','Rice and biriyani'],['start','Starters'],['chin','Indo-Chinese'],['spl','Special days']];
+const dots=t=>t==='b'?'<span class="dot v"></span><span class="dot n"></span>':`<span class="dot ${t}"></span>`;
+function show(c){const ml=$('#ml');ml.classList.add('f');setTimeout(()=>{
+ ml.innerHTML=M.filter(m=>c==='all'||m[0]===c).map((m,i)=>`<div class="it" style="animation-delay:${i*60}ms"><h3>${dots(m[1])}${m[2]}${m[4]?`<span class="tg">${m[4]}</span>`:''}</h3><p>${m[3]}</p></div>`).join('');
+ ml.classList.remove('f')},260)}
+$('#tb').innerHTML=T.map((t,i)=>`<button data-c="${t[0]}" class="${i?'':'a'}">${t[1]}</button>`).join('');
+$('#tb').onclick=e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#tb button').forEach(x=>x.classList.remove('a'));b.classList.add('a');show(b.dataset.c)};
+show('all');
+/* reviews carousel */
+const tr=$('#tr');$('#nx').onclick=()=>tr.scrollBy({left:400,behavior:'smooth'});$('#pv').onclick=()=>tr.scrollBy({left:-400,behavior:'smooth'});
+/* forms */
+$('#cf1').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);send(`Catering enquiry\nName: ${f.get('name')}\nPhone: ${f.get('phone')}\nEvent: ${f.get('event')}\nDate: ${f.get('date')}\nGuests: ${f.get('guests')}`)};
+$('#cf2').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);send(`Hi Kranthi Fast Foods, I am ${f.get('name')}.\n${f.get('msg')}`)};
+/* assistant: set CHAT_ENDPOINT to a serverless URL that accepts {message} and returns {reply} for a real AI model */
+const CHAT_ENDPOINT='';
+const KB=[
+[/hour|time|open|close|timing|late/,'We’re open every day from 10 AM to 11 PM.'],
+[/where|location|address|map|reach|direction|find/,'We’re near the MRO Office, beside the Mineral Water Plant, Prattipadu, Andhra Pradesh 533432. Use “Get directions” in the Visit section for the map.'],
+[/phone|call|number|contact|whatsapp/,'Call or WhatsApp us on 94414 61339.'],
+[/signature|best|famous|recommend|popular/,'Our signature dishes are Chicken Biriyani, Fried Rice (Chicken or Veg) and Chicken Wings. Guests also love the Chicken Lollipop.'],
+[/special day|fish|prawn|mutton/,'Fish fry and curry, prawns and mutton are cooked only on special days, announced in advance. Call or WhatsApp to hear about the next one.'],
+[/veg|vegetarian/,'Vegetarian options: Veg Fried Rice, Veg Noodles and Veg Manchuria.'],
+[/biriyani|biryani/,'Our Hyderabadi dum Chicken Biriyani is our signature dish and a guest favourite.'],
+[/menu|food|dish|serve|eat|have/,'Chicken Lollipop, Chicken Biriyani, Fried Rice (Chicken/Veg), Chicken 65, Chicken Manchurian, Veg Manchuria, Noodles (Chicken/Veg) and Chicken Wings. Fish, prawns and mutton on special days.'],
+[/cater|event|wedding|party|birthday|bulk|function/,'Yes, we cater for all events. Fill in the catering form with your date, guest count and event type, and we’ll reply on WhatsApp.'],
+[/deliver|takeaway|take away|parcel|dine|parking|family/,'Dine-in, takeaway, delivery and parking are all available, and we’re family friendly.'],
+[/price|cost|rate|how much/,'For today’s prices, please call or WhatsApp 94414 61339.'],
+[/since|history|story|started|old/,'We’ve been serving Prattipadu since 2002.'],
+[/rating|review/,'Guests rate us 4.6 stars on Google.']];
+const ms=$('#ms'),add=(t,c)=>{const d=document.createElement('div');d.className='m '+c;d.textContent=t;ms.appendChild(d);ms.scrollTop=ms.scrollHeight;return d};
+const local=q=>{q=q.toLowerCase();for(const[r,a]of KB)if(r.test(q))return a;return'I’m not sure about that one. Please call or WhatsApp 94414 61339 and we’ll help.'};
+async function ans(q){if(CHAT_ENDPOINT){try{const r=await fetch(CHAT_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:q})});const j=await r.json();if(j.reply)return j.reply}catch(e){}}return local(q)}
+async function ask(q){if(!q.trim())return;add(q,'u');const t=add('…','b');t.textContent=await ans(q)}
+$('#cfm').onsubmit=e=>{e.preventDefault();ask($('#q').value);$('#q').value=''};
+['Menu','Opening hours','Location','Catering','Signature dishes'].forEach(c=>{const b=document.createElement('button');b.textContent=c;b.onclick=()=>ask(c);$('#cp').appendChild(b)});
+add('Hi! Ask me about our menu, timings, location or catering.','b');
+$('#cb').onclick=()=>$('#ch').classList.toggle('open');$('#cx').onclick=()=>$('#ch').classList.remove('open');
+</script>
+</body>
+</html>
